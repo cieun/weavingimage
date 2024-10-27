@@ -1,0 +1,177 @@
+@import url("https://cdn.jsdelivr.net/gh/fonts-archive/AppleSDGothicNeo/AppleSDGothicNeo.css");
+@font-face {
+  font-family: "PicNic";
+  src: url(./font/PicNic.woff2) format(woff2), url(./font/PicNic.woff) format(woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  position: relative;
+  box-sizing: border-box;
+  mix-blend-mode: difference;
+  color: #fff;
+  font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Noto Sans CJK KR", "Pretendard", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.background .column {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 100vh;
+  background-color: #fff;
+  animation: slide-column 5s infinite cubic-bezier(0.77, 0.02, 0.33, 1.01);
+  animation-direction: alternate;
+}
+.background .row {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 50%;
+  background-color: #fff;
+  animation: slide-row 5s infinite 1s cubic-bezier(0.77, 0.02, 0.33, 1.01);
+  animation-direction: alternate;
+}
+
+.thread-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+}
+.thread-wrapper .line-path {
+  display: none;
+  position: absolute;
+  bottom: 3%;
+  width: 100%;
+}
+.thread-wrapper .thread-graphic {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  width: 15rem;
+}
+.thread-wrapper .thread-graphic img {
+  width: 100%;
+}
+
+.title-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo-path {
+  position: absolute;
+  top: 50vh;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+.logo-path svg {
+  width: 105vw;
+}
+.logo-path svg path {
+  stroke-linecap: round;
+  stroke-dasharray: 32000;
+  stroke-dashoffset: 32000;
+}
+
+.foreground {
+  padding: 1.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menu {
+  text-align: right;
+  font-size: 1.8rem;
+  line-height: 3.125rem;
+  font-family: "Apple SD Gothic Neo";
+}
+.menu #date {
+  position: relative;
+  font-size: 7.3125rem;
+  font-family: "PicNic";
+  line-height: 8.1875rem;
+  margin-bottom: 2.2rem;
+}
+.menu .exhibit-title {
+  margin-bottom: 3.5rem;
+  font-weight: 900;
+}
+.menu .info {
+  font-weight: 700;
+  margin-bottom: 3.5rem;
+}
+
+footer {
+  padding: 1.25rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+footer .hivcd-logo {
+  width: 3rem;
+}
+footer .hivcd-logo img {
+  width: 100%;
+}
+
+@keyframes slide-column {
+  0% {
+    right: 0;
+    width: 30%;
+  }
+  10% {
+    right: 0;
+    width: 30%;
+  }
+  90% {
+    right: 50%;
+    width: 50%;
+  }
+  100% {
+    right: 50%;
+    width: 50%;
+  }
+}
+@keyframes slide-row {
+  0% {
+    bottom: 0;
+    height: 50%;
+  }
+  10% {
+    bottom: 0;
+    height: 50%;
+  }
+  90% {
+    bottom: 65%;
+    height: 35%;
+  }
+  100% {
+    bottom: 65%;
+    height: 35%;
+  }
+}/*# sourceMappingURL=style.css.map */
